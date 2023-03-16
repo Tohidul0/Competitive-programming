@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,m=0;
+    long int n;
+    int arr[15000]= {0};
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        vector<int> arr1;
+        for(int i=1; i<=n; i++)
+        {
+            cin>>arr[i];
+            arr1.push_back(arr[i]);
+        }
+        if(n%2==0)
+            cout<<"YES"<<endl;
+        else
+        {
+            sort(arr1.begin(),arr1.end());
+
+            for(int i=1,j=0; i<=n; i++,j++)
+            {
+                if(arr[i]!=arr1[j])
+                {
+                    m++;
+                    break;
+                }
+            }
+            if(m>0)
+                cout<<"YES"<<endl;
+            else
+                cout<<"NO"<<endl;
+        }
+        int arr[15000]= {0};
+        m=0;
+    }
+}
