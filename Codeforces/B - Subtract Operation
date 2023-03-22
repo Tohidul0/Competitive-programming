@@ -1,0 +1,58 @@
+//             Bismillahir Rahmanir Rahim                    //
+//             Mohammad Tohidul Alam Akil                    //
+//                Dept. of CSE,IIUC.                         //
+#include<bits/stdc++.h>
+using namespace std;
+ 
+#define YES cout << "YES" << endl
+#define Yes cout << "Yes" << endl
+#define yes cout << "yes" << endl
+#define No cout << "No" << endl
+#define NO cout << "NO" << endl
+#define no cout << "no" << endl
+#define _1 cout << -1 << endl;
+ 
+#define ll long long
+#define ull unsigned long long
+#define pii pair<int, int>
+#define pll pair<ll, ll>
+#define vi vector<int>
+#define vs vector<char>
+#define vl vector<ll>
+#define vii vector<pii>
+#define vll vector<pll>
+#define pb push_back
+#define ff first
+#define ss second
+int main()
+{
+        int t,a,k;
+        cin>>t;
+        while(t--)
+        {
+                int n,l,g=0;
+                cin>>n>>l;
+                vector<int> v;
+                for(int i=1;i<=n;i++){
+                        cin>>a;
+                        v.pb(a);
+                }
+                sort(v.begin(),v.end());
+                for(int i=0;i<n;i++)
+                {
+                        k=v[i]+l;
+                        if(binary_search(v.begin()+i,v.end(),k))//stl binary search only return 0 or 1
+                        {
+                                cout<<"yes"<<endl;
+                                g++;
+                                break;
+                        }
+ 
+                }
+                if(g==0)
+                        cout<<"NO"<<endl;
+                g=0;
+        }
+ 
+}
+ 

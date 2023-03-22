@@ -1,0 +1,47 @@
+//             Bismillahir Rahmanir Rahim                    //
+//             Mohammad Tohidul Alam Akil                    //
+//                Dept. of CSE,IIUC.                         //
+#include<bits/stdc++.h>
+using namespace std;
+ 
+#define YES cout << "YES" << endl
+#define Yes cout << "Yes" << endl
+#define yes cout << "yes" << endl
+#define No cout << "No" << endl
+#define NO cout << "NO" << endl
+#define no cout << "no" << endl
+#define _1 cout << -1 << endl;
+ 
+#define ll long long
+#define ull unsigned long long
+#define pii pair<int, int>
+#define pll pair<ll, ll>
+#define vi vector<int>
+#define vs vector<char>
+#define vl vector<ll>
+#define vii vector<pii>
+#define vll vector<pll>
+#define pb push_back
+#define ff first
+#define ss second
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x,y;
+        cin>>x>>y;
+        double a=(x*x)+(y*y);
+        a=sqrt(a);
+        int b=a;
+        if(x==0&&y==0)
+            cout<<"0"<<endl;
+ 
+        else if(a-b==0.00)
+            cout<<"1"<<endl;
+        else
+            cout<<"2"<<endl;
+ 
+    }
+}
